@@ -8,6 +8,13 @@ actividades.py (tarjetas interactivas), logica.py (cálculos y guardado).
 
 Ejecutar con:  streamlit run app.py
 """
+import os
+import time
+
+os.environ["TZ"] = "America/Lima"
+if hasattr(time, "tzset"):
+    time.tzset()
+    
 import html
 import random
 from datetime import date
